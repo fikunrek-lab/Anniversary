@@ -1,0 +1,789 @@
+/* =========================================
+   OUR STORY — ANNIVERSARY WEBSITE
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #fffaf8;
+    color: #332b2b;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Cormorant Garamond", serif;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.section-label {
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #a56b73;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   HERO / OPENING
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(30, 19, 22, 0.43),
+            rgba(30, 19, 22, 0.60)
+        ),
+        url("images/Feb_27.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+
+    color: white;
+}
+
+.hero .small-heading {
+    font-size: 0.72rem;
+    letter-spacing: 7px;
+    font-weight: 500;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(3.8rem, 8vw, 7rem);
+    font-weight: 500;
+    line-height: 0.95;
+
+    margin-bottom: 28px;
+}
+
+.hero-message {
+    max-width: 600px;
+
+    margin: 0 auto 40px;
+
+    font-size: 1rem;
+    font-weight: 300;
+
+    line-height: 1.9;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.start-button {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.start-button:hover {
+    background: white;
+    color: #583e43;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   GENERAL SECTION HEADINGS
+========================================= */
+
+.section-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 90px;
+}
+
+.section-heading h2 {
+    font-size: clamp(2.8rem, 5vw, 4.3rem);
+    font-weight: 500;
+    line-height: 1.1;
+
+    margin: 12px 0 15px;
+}
+
+.section-heading > p:last-child {
+    color: #74676a;
+
+    max-width: 550px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   OUR FIRST SIX MONTHS
+========================================= */
+
+.months-section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 130px 40px 70px;
+}
+
+
+/* =========================================
+   MEMORY CARDS
+========================================= */
+
+.memory-card {
+    display: flex;
+    align-items: center;
+
+    gap: 80px;
+
+    margin-bottom: 150px;
+}
+
+.memory-card.reverse {
+    flex-direction: row-reverse;
+}
+
+
+/* PHOTO */
+
+.memory-image {
+    flex: 1;
+
+    position: relative;
+}
+
+.memory-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 18px;
+    left: 18px;
+
+    border: 1px solid #d6afb5;
+
+    z-index: -1;
+}
+
+.memory-image img {
+    display: block;
+
+    width: 100%;
+    height: 550px;
+
+    object-fit: cover;
+
+    box-shadow:
+        0 20px 50px rgba(72, 43, 48, 0.14);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.memory-image:hover img {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 28px 60px rgba(72, 43, 48, 0.20);
+}
+
+
+/* MEMORY DESCRIPTION */
+
+.memory-text {
+    flex: 1;
+}
+
+.memory-text span {
+    display: inline-block;
+
+    color: #b47d85;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 5px;
+}
+
+.memory-text h3 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.1;
+
+    margin: 5px 0 20px;
+}
+
+.memory-text p {
+    color: #665b5d;
+
+    max-width: 430px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   FUTURE MONTHS
+========================================= */
+
+.future-section {
+    padding: 120px 40px 130px;
+
+    background: #f8eeee;
+}
+
+.future-months {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.locked-month {
+    min-height: 280px;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.58);
+
+    border: 1px solid #e2cdd0;
+    border-radius: 8px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.locked-month:hover {
+    transform: translateY(-7px);
+
+    background: rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 15px 35px rgba(78, 50, 55, 0.08);
+}
+
+.lock {
+    font-size: 1.6rem;
+
+    margin-bottom: 20px;
+
+    opacity: 0.6;
+}
+
+.locked-month h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.locked-month p {
+    color: #88787b;
+
+    font-size: 0.85rem;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   6 THINGS I LOVE ABOUT YOU
+========================================= */
+
+.love-section {
+    text-align: center;
+
+    padding: 130px 20px;
+}
+
+#love-button,
+#random-memory-button {
+    border: none;
+
+    padding: 16px 32px;
+
+    background: #744c54;
+    color: white;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.78rem;
+    letter-spacing: 1.3px;
+
+    box-shadow:
+        0 10px 25px rgba(91, 56, 63, 0.12);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+#love-button:hover,
+#random-memory-button:hover {
+    background: #58383f;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(91, 56, 63, 0.18);
+}
+
+
+/* LOVE LETTER */
+
+.love-letter {
+    max-width: 800px;
+
+    margin: 65px auto 0;
+
+    text-align: left;
+}
+
+.love-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 30px;
+
+    padding: 30px 10px;
+
+    border-bottom: 1px solid #eadbdd;
+}
+
+.love-item span {
+    min-width: 45px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2.2rem;
+
+    color: #bd858d;
+
+    line-height: 1;
+}
+
+.love-item p {
+    padding-top: 3px;
+
+    color: #665b5d;
+
+    line-height: 1.9;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================================
+   RANDOM MEMORY
+========================================= */
+
+.random-section {
+    padding: 130px 20px;
+
+    text-align: center;
+
+    background: #f8eeee;
+}
+
+.random-section h2 {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    font-weight: 500;
+
+    margin: 10px 0 15px;
+}
+
+.random-section > p:not(.section-label) {
+    max-width: 550px;
+
+    margin: 0 auto 35px;
+
+    color: #76676a;
+}
+
+.random-memory {
+    max-width: 500px;
+
+    margin: 55px auto 0;
+}
+
+.random-memory img {
+    display: block;
+
+    width: 100%;
+    max-height: 600px;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 20px 50px rgba(72, 43, 48, 0.18);
+}
+
+.random-memory p {
+    margin-top: 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.5rem;
+
+    color: #654a4f;
+}
+
+
+/* =========================================
+   ENDING
+========================================= */
+
+.ending-section {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background: #33282a;
+
+    color: white;
+}
+
+.ending-section .section-label {
+    color: #d3a4ab;
+}
+
+.ending-section h2 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 1.05;
+
+    margin-top: 20px;
+}
+
+.ending-section h3 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 400;
+
+    color: #e7bbc1;
+
+    margin: 10px 0 30px;
+}
+
+.ending-section > p {
+    color: #c9babc;
+}
+
+
+/* =========================================
+   NEXT MEMORY LOADING BAR
+========================================= */
+
+.loading-container {
+    width: min(500px, 80%);
+
+    margin-top: 60px;
+}
+
+.loading-container p {
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+
+    color: #c9babc;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 5px;
+
+    background: #554347;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.loading-progress {
+    width: 60%;
+    height: 100%;
+
+    background: #d5a0a8;
+
+    border-radius: 20px;
+
+    position: relative;
+}
+
+
+/* Small shine effect */
+
+.loading-progress::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 25px;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 900px) {
+
+    .memory-card {
+        gap: 55px;
+    }
+
+    .memory-image img {
+        height: 500px;
+    }
+
+    .memory-text h3 {
+        font-size: 2.8rem;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero-message {
+        font-size: 0.9rem;
+    }
+
+    .months-section {
+        padding:
+            100px
+            25px
+            40px;
+    }
+
+    .section-heading {
+        margin-bottom: 70px;
+    }
+
+    .memory-card,
+    .memory-card.reverse {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 45px;
+
+        margin-bottom: 110px;
+    }
+
+    .memory-image {
+        width: 100%;
+    }
+
+    .memory-image img {
+        height: 500px;
+    }
+
+    .memory-text {
+        width: 100%;
+    }
+
+    .memory-text h3 {
+        font-size: 2.8rem;
+    }
+
+    .memory-text p {
+        max-width: 100%;
+    }
+
+    .future-section {
+        padding:
+            100px
+            25px;
+    }
+
+    .future-months {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+    }
+
+    .locked-month {
+        min-height: 220px;
+    }
+
+    .love-section,
+    .random-section {
+        padding:
+            100px
+            25px;
+    }
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .hero {
+        padding:
+            40px
+            22px;
+    }
+
+    .hero h1 {
+        font-size: 3.3rem;
+    }
+
+    .hero .small-heading {
+        letter-spacing: 5px;
+    }
+
+    .hero-message {
+        line-height: 1.8;
+    }
+
+    .section-heading h2 {
+        font-size: 2.8rem;
+    }
+
+    .memory-image img {
+        height: 430px;
+    }
+
+    .memory-image::before {
+        top: 12px;
+        left: 12px;
+    }
+
+    .memory-text h3 {
+        font-size: 2.5rem;
+    }
+
+    .love-item {
+        gap: 20px;
+
+        padding:
+            25px
+            5px;
+    }
+
+    .love-item span {
+        min-width: 35px;
+
+        font-size: 1.8rem;
+    }
+
+    .ending-section {
+        min-height: 100svh;
+    }
+
+    .loading-container {
+        width: 90%;
+    }
+}
